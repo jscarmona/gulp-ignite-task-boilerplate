@@ -1,5 +1,3 @@
-'use strict';
-
 import yargs from 'yargs';
 
 export default {
@@ -31,17 +29,18 @@ export default {
 
   /**
    * Task function
+   * @param {object} config
    * @param {Function} end
    * @param {Function} error
-   * @return {Object}
    */
   fn(config, end, error) {
     if (!config) {
-      return error();
+      error();
     }
 
-    config.sample = yargs.argv.sample || config.sample;
+    /* eslint no-unused-vars: 0 */
+    const sample = yargs.argv.sample || config.sample;
 
     end();
-  }
+  },
 };

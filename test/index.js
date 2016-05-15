@@ -1,6 +1,3 @@
-/* jshint -W030 */
-'use strict';
-
 import chai from 'chai';
 import task from '../src';
 
