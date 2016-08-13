@@ -1,15 +1,15 @@
-# gulp-ignite-task
+# gulp-ignite-task-boilerplate
 
-[![Build Status](https://travis-ci.org/jscarmona/gulp-ignite-task.svg?branch=master)](https://travis-ci.org/jscarmona/gulp-ignite-task)
-[![npm](https://img.shields.io/npm/dt/gulp-ignite-task.svg?maxAge=2592000)]()
-[![GitHub tag](https://img.shields.io/github/release/jscarmona/gulp-ignite-task.svg?maxAge=2592000)]()
+[![Build Status](https://travis-ci.org/jscarmona/gulp-ignite-task-boilerplate.svg?branch=master)](https://travis-ci.org/jscarmona/gulp-ignite-task-boilerplate)
+[![npm](https://img.shields.io/npm/dt/gulp-ignite-task-boilerplate.svg?maxAge=2592000)]()
+[![GitHub tag](https://img.shields.io/github/release/jscarmona/gulp-ignite-task-boilerplate.svg?maxAge=2592000)]()
 
 ## install
 
 **NPM**
 
 ```bash
-$ npm install --save-dev gulp-ignite gulp-ignite-task
+$ npm install --save-dev gulp-ignite gulp-ignite-task-boilerplate
 ```
 
 ## example
@@ -18,12 +18,10 @@ $ npm install --save-dev gulp-ignite gulp-ignite-task
 'use strict';
 
 import ignite from 'gulp-ignite';
-import task from 'gulp-ignite-task';
+import task from 'gulp-task-boilerplate';
 
 const tasks = [task];
-const options = {
-  task: {},
-};
+const options = {};
 
 ignite.start(tasks, options);
 
@@ -31,25 +29,16 @@ ignite.start(tasks, options);
 
 ## usage
 
+Run task on src files.
+
 ```bash
-$ gulp task --watch --min --sourcemap
+$ gulp task --watch
 ```
 
-### available runtime overrides
+##### arguments
 
-* --watch
-* --min
-* --sourcemap
-
-
-## options
-
-### deps
-
-**Type:** `Array`  
-**Default:** `[]`
-
-Any gulp tasks that task would be dependent of.
+##### options
+- `deps` - Any gulp tasks that task would be dependent of. (**Default:** `[]`)
 
 ## license
 
